@@ -1,0 +1,106 @@
+:root {
+  --bulma-primary-h: 245deg;
+  --bulma-primary-l: 33%;
+  --bulma-link-h: 245deg;
+  --bulma-link-l: 54%;
+  --bulma-info-h: 183deg;
+  --bulma-info-l: 60%;
+  --bulma-danger-l: 56%;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 4rem !important; /* Adjust the size as needed for mobile */
+  }
+  .subtitle {
+    font-size: 1.5rem; /* Adjust the size as needed for mobile */
+  }
+}
+.cursor {
+  display: inline-block;
+  width: 5px;
+  height: 1em;
+  background-color: rgb(0, 255, 42);
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+.hidden-card {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-link:hover .card {
+  transform: scale(1.03);
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border-bottom: 3px solid #292929;
+}
+.stats {
+  border-top: 1px solid #292929;
+  padding-top: 20px;
+}
+
+.hidden-icon {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hoverable-image {
+  transition: transform 0.5s !important;
+}
+
+.hoverable-image:hover {
+  transform: scale(1.05) !important;
+}
+
+/* Webkit-based browsers */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #222222; /* Dark gray color */
+  border-radius: 10px;
+}
+
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+  border-radius: 10px;
+}
+
+object {
+  width: 100%;
+  height: 210vh; /* take up the full viewport height */
+}
